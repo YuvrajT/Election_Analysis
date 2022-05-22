@@ -13,6 +13,9 @@
 # from typing import Counter
 
 
+from tkinter import Y
+
+
 counties = ["Arapahoe","Denver","Jefferson"]
 # if counties[2] == 'Denver':
 #     print(counties[2])
@@ -115,9 +118,9 @@ counties = ["Arapahoe","Denver","Jefferson"]
 # for a, b in counties_dict.items():
 #     print(f"{a} county has {b} registered voters.")
 
-voting_data = [{"county":"Arapahoe", "registered_voters": 422829},   
-               {"county":"Denver", "registered_voters": 463353}, 
-                {"county":"Jefferson", "registered_voters": 432438}]
+# voting_data = [{"county":"Arapahoe", "registered_voters": 422829},   
+#                {"county":"Denver", "registered_voters": 463353}, 
+#                 {"county":"Jefferson", "registered_voters": 432438}]
 
 # voting_data = {"county":"Arapahoe", "registered_voters": 422829}
 # # print(voting_data)    
@@ -129,4 +132,24 @@ voting_data = [{"county":"Arapahoe", "registered_voters": 422829},
 
 
 
+# for x in range(9):
+#     print(x)
 
+# range_list = list(range(5))
+# print (range_list)
+
+# word = "Peace"
+
+# for i in word:
+#     print(i)
+
+# zoo = ["cat", "dog", "rabbit"]
+
+# for b in zoo:
+#     print (b)
+
+run = "o"
+
+while run == "y":
+    print("start understanding the logic")
+    run = input("to run again, Enter y")
