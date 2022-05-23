@@ -9,7 +9,7 @@ file_to_load = os.path.join("Resources","election_results.csv")
 
 #Assigned a variable to save the file to path
 
-file_to_save = os.path.join("Analysis", "election_analysis.txt")
+file_to_save = os.path.join("Analysis", "election_analysis_PyPoll.txt")
 
 #1. Initialising the total vote counter
 
@@ -73,7 +73,7 @@ with open(file_to_load) as election_data:
 
     #Save the results to text file 
 
-    with open(file_to_save, "w") as text_file:
+with open(file_to_save, "w") as txt_file:
 
         elections_results = (
             f"\nElection Results\n"
@@ -83,8 +83,7 @@ with open(file_to_load) as election_data:
 
         print(elections_results, end="")
 
-        text_file.write(elections_results)
-
+        txt_file.write(elections_results)
 
 #Determining the % of votes for each candidate
 
@@ -100,7 +99,7 @@ for candidate_name in candidate_votes:
 
     vote_percentage = float(votes) / float(total_votes) *100
 
-    # print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+    candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
     #Determining winning vote count and candidate
 
@@ -128,4 +127,9 @@ for candidate_name in candidate_votes:
             f"----------------------------\n")
 
     print(winning_candidate_summary) 
+
+    #Save the winning detials to text file:
+     
+txt_file.write(winning_candidate_summary)       
+
 
